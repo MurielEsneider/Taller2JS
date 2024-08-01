@@ -10,7 +10,7 @@ console.log(libro1.devolverLibro());
 console.log(libro1.mostrarEstado()); 
 
 /* Instancia de LibroDigital */
-const libroDigital1 = new LibroSistema("1984", "George Orwell", "ePub");
+const libroDigital1 = new LibroSistema("El amor en tiempos de Cólera", "Gabriel García Marquez", "novela");
 console.log(libroDigital1.mostrarEstado());
 console.log(libroDigital1.prestarLibro()); 
 console.log(libroDigital1.mostrarEstado()); 

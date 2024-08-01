@@ -1,13 +1,10 @@
 class ReservaHotel {
     #habitacionAsignada;
-
     constructor(nombreCliente, fechaReserva) {
         this.nombreCliente = nombreCliente;
         this.fechaReserva = fechaReserva;
         this.#habitacionAsignada = null;
     }
-
-    // Metodos
     reservarHabitacion(habitacion) {
         if (this.#habitacionAsignada === null) {
             this.#habitacionAsignada = habitacion;
@@ -16,7 +13,6 @@ class ReservaHotel {
             return `Ya hay una habitación reservada para ${this.nombreCliente}.`;
         }
     }
-
     cancelarReserva() {
         if (this.#habitacionAsignada !== null) {
             const habitacionCancelada = this.#habitacionAsignada;
@@ -26,7 +22,6 @@ class ReservaHotel {
             return `No hay ninguna reserva para cancelar.`;
         }
     }
-
     mostrarReserva() {
         if (this.#habitacionAsignada !== null) {
             return `Nombre del Cliente: ${this.nombreCliente}
@@ -38,9 +33,9 @@ class ReservaHotel {
     }
 }
 
-// Instancias
-const reserva1 = new ReservaHotel("Beto", "2025-08-16");
-console.log(reserva1.reservarHabitacion("11B"));
+
+const reserva1 = new ReservaHotel(" Juan", "2024-02-15");
+console.log(reserva1.reservarHabitacion("44"));
 console.log(reserva1.mostrarReserva());
 console.log(reserva1.cancelarReserva());
 console.log(reserva1.mostrarReserva());
